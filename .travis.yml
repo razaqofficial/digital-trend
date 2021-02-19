@@ -3,7 +3,14 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t digital-trend .
-script:
-  - docker run digital-trend /var/www/html/vendor/bin/phpunit
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-2"
+  app: "digital-trend"
+  env: "Digitaltrend-env"
+  bucket_name: "elasticbeanstalk-eu-west-2-719381170469"
+  bucket_path: "digital-trend"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  on:
+    branch: main
