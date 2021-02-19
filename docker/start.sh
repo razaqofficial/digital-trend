@@ -1,0 +1,2 @@
+#supervisor
+/usr/bin/supervisord
