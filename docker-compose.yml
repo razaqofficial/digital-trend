@@ -6,5 +6,4 @@ services:
       - .env:/var/www/html/.env
     ports:
       - "3000:80"
-    command: /usr/bin/supervisord
     restart: always

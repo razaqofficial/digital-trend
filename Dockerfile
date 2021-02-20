@@ -52,4 +52,4 @@ RUN chown -R www-data:www-data $APP_HOME
 EXPOSE 80
 
 # start up command
-#CMD ["/bin/bash", "./docker/start.sh"]
+ENTRYPOINT ["/bin/bash", "./docker/start.sh"]
