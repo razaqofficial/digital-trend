@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+before_deploy:
+  - 'echo copying .env'
+  - 'cp /var/.env .env'
+
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-2"
