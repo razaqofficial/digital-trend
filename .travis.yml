@@ -5,7 +5,7 @@ services:
 
 before_deploy:
   - 'echo copying .env'
-  - sh 'cp /opt/.env_auth .env'
+  - sh 'cp /var/.env .env'
 
 deploy:
   provider: elasticbeanstalk
