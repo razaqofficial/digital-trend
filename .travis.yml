@@ -3,10 +3,6 @@ sudo: required
 services:
   - docker
 
-before_deploy:
-  - 'echo copying .env'
-  - sh 'cp /var/.env .env'
-
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-2"
@@ -18,3 +14,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   on:
     branch: main
+
+after_deploy:
+  - 'echo copying .env'
+  - sh 'cp /var/.env .env'
