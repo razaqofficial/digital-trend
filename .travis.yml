@@ -14,7 +14,3 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   on:
     branch: main
-
-after_deploy:
-  - 'echo copying .env'
-  - sh 'cp /var/.env .env'
