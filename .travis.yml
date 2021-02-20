@@ -6,10 +6,10 @@ services:
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-2"
-  app: "digital-trend"
-  env: "Digitaltrend-env"
+  app: "digital-trending"
+  env: "Digitaltrending-env"
   bucket_name: "elasticbeanstalk-eu-west-2-719381170469"
-  bucket_path: "digital-trend"
+  bucket_path: "digital-trending"
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   on:

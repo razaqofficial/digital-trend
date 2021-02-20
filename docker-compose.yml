@@ -1,0 +1,7 @@
+version: '3'
+services:
+  digital-trend:
+    build: .
+    volumes:
+      - /var/.env:/var/www/html/.env
+    restart: always
