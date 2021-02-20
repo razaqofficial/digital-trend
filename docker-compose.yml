@@ -3,7 +3,8 @@ services:
   digital-trend:
     build: .
     volumes:
-      - /var/.env:/var/www/html/.env
-    restart: always
+      - .env:/var/www/html/.env
     ports:
-      - "80:80"
+      - "3000:80"
+    command: /usr/bin/supervisord
+    restart: always
