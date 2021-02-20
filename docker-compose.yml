@@ -5,3 +5,5 @@ services:
     volumes:
       - /var/.env:/var/www/html/.env
     restart: always
+    ports:
+      - "80:80"
